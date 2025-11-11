@@ -74,7 +74,7 @@ class UserSubsystem {
   checkUser(info: IUser, code2FA?: string, totpDriftToleranceSteps: number = 0) {
     const inputPassword = info.passWord || "";
     for (const [uuid, user] of this.objects) {
-      if (user.userName === info.userName) {
+      if (user.userName.toUpperCase() === info.userName?.toUpperCase()) {
         if (
           user.open2FA &&
           user.secret &&
@@ -94,7 +94,7 @@ class UserSubsystem {
   existUserName(userName: string): boolean {
     let flag = false;
     this.objects.forEach((user) => {
-      if (user.userName === userName) return (flag = true);
+      if (user.userName.toUpperCase() === userName.toUpperCase()) return (flag = true);
     });
     return flag;
   }
@@ -139,7 +139,7 @@ class UserSubsystem {
   getUserByUserName(userName: string) {
     for (const map of this.objects) {
       const user = map[1];
-      if (user.userName === userName) return user;
+      if (user.userName.toUpperCase() === userName.toUpperCase()) return user;
     }
     return null;
   }
