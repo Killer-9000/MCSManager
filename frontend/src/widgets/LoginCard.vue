@@ -40,6 +40,7 @@ const handleLogin = async () => {
     return message.error(t("TXT_CODE_c846074d"));
   }
   try {
+    formData.username = formData.username.toLowerCase(); 
     loginStep.value++;
     await sleep(600);
     const result = await login({
