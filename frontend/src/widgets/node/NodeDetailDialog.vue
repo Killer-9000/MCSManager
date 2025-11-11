@@ -34,7 +34,7 @@ const DEFAULT_CONFIG = {
 
 const SPEED_RATE_OPTIONS = [
   {
-    label: "无限制",
+    label: "Unlimited",
     value: 0
   },
   {

@@ -20,8 +20,7 @@ import {
   FileOutlined,
   InboxOutlined,
   LinkOutlined,
-  PlusOutlined,
-  SelectOutlined
+  PlusOutlined
 } from "@ant-design/icons-vue";
 import { Flex, message, Modal, type UploadProps } from "ant-design-vue";
 import axios from "axios";
@@ -616,16 +615,12 @@ onMounted(() => {
                     class="download-button"
                     @click="handleSelectItem(item)"
                   >
-                    <template #icon>
-                      <SelectOutlined v-if="multipleMode" />
-                      <DownloadOutlined v-else />
-                    </template>
                     {{
                       multipleMode
                         ? findItem(item)
                           ? t("TXT_CODE_abedfd03")
                           : t("TXT_CODE_7b2c5414")
-                        : t("TXT_CODE_1704ea49")
+                        : t("TXT_CODE_ad207008")
                     }}
                   </a-button>
                 </div>

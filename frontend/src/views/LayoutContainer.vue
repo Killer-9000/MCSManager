@@ -92,7 +92,7 @@ const showCardOperator = (card: ILayoutCard) => {
 
     <div
       v-if="currentLayoutConfig.length <= 1 && currentLayoutConfig.length != 0"
-      :class="{ 'main-flex-center': !isPhone }"
+      :class="{ 'main-flex-top': !isPhone }"
     >
       <a-row :gutter="[0, 0]" :align="'center' as any" style="width: 100%">
         <a-col
