@@ -6,9 +6,9 @@ BASE_PATH=$(pwd)
 
 npm run preview-build
 
-rm -rf production-code
-rm -rf ./daemon/dist ./daemon/production
-rm -rf ./panel/dist ./panel/production
+# rm -rf production-code
+# rm -rf ./daemon/dist ./daemon/production
+# rm -rf ./panel/dist ./panel/production
 
 echo "Build daemon..."
 cd "${BASE_PATH}/daemon"
@@ -42,9 +42,9 @@ cp -f "${BASE_PATH}/panel/package-lock.json" "${BASE_PATH}/production-code/web/p
 
 mv "${BASE_PATH}"/frontend/dist/* "${BASE_PATH}/production-code/web/public"
 
-rm -rf "${BASE_PATH}/daemon/dist" "${BASE_PATH}/daemon/production"
-rm -rf "${BASE_PATH}/panel/dist" "${BASE_PATH}/panel/production"
-rm -rf "${BASE_PATH}/frontend/dist"
+# rm -rf "${BASE_PATH}/daemon/dist" "${BASE_PATH}/daemon/production"
+# rm -rf "${BASE_PATH}/panel/dist" "${BASE_PATH}/panel/production"
+# rm -rf "${BASE_PATH}/frontend/dist"
 
 cd "${BASE_PATH}/production-code/daemon"
 npm install --production --no-fund --no-audit
