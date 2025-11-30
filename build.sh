@@ -41,7 +41,7 @@ mv "${BASE_PATH}/panel/production/app.js.map" "${BASE_PATH}/production-code/web"
 cp -f "${BASE_PATH}/panel/package.json" "${BASE_PATH}/production-code/web/package.json"
 cp -f "${BASE_PATH}/panel/package-lock.json" "${BASE_PATH}/production-code/web/package-lock.json"
 
-mv "${BASE_PATH}"/frontend/dist/* "${BASE_PATH}/production-code/web/public"
+cp -r "${BASE_PATH}"/frontend/dist/* "${BASE_PATH}/production-code/web/public"
 
 # rm -rf "${BASE_PATH}/daemon/dist" "${BASE_PATH}/daemon/production"
 # rm -rf "${BASE_PATH}/panel/dist" "${BASE_PATH}/panel/production"
