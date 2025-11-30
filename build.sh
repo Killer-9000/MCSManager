@@ -6,6 +6,11 @@ BASE_PATH=$(pwd)
 
 npm run preview-build
 
+mkdir -p production-code
+mkdir -p production-code/daemon
+mkdir -p production-code/web
+mkdir -p production-code/web/public
+
 # rm -rf production-code
 # rm -rf ./daemon/dist ./daemon/production
 # rm -rf ./panel/dist ./panel/production
@@ -25,10 +30,6 @@ npm run build
 echo "Collecting files..."
 cd "${BASE_PATH}"
 
-mkdir production-code
-mkdir production-code/daemon
-mkdir production-code/web
-mkdir production-code/web/public
 
 mv "${BASE_PATH}/daemon/production/app.js" "${BASE_PATH}/production-code/daemon"
 mv "${BASE_PATH}/daemon/production/app.js.map" "${BASE_PATH}/production-code/daemon"
