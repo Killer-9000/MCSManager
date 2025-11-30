@@ -192,23 +192,6 @@ export interface ContainerInfo {
   ];
 }
 
-export interface NewInstanceForm {
-  nickname: string;
-  processType: string;
-  startCommand: string;
-  stopCommand: string;
-  cwd: string;
-  ie: string;
-  oe: string;
-  createDatetime: string;
-  lastDatetime: string;
-  type: string;
-  tag: never[];
-  maxSpace: null;
-  endTime: string;
-  docker: IGlobalInstanceDockerConfig;
-}
-
 export type QuickStartTemplate = IQuickStartTemplate;
 export type QuickStartPackages = IQuickStartPackages;
 
@@ -225,7 +208,7 @@ export interface MountComponent<T = any> {
 export interface Schedule {
   instanceUuid: string;
   name: string;
-  count: number;
+  count: number | string;
   time: string;
   actions: ScheduleAction[];
   type: number;
@@ -238,7 +221,7 @@ export interface ScheduleAction {
 
 export interface NewScheduleTask {
   name: string;
-  count: number;
+  count: number | string;
   time: string;
   type: ScheduleCreateType;
 }
